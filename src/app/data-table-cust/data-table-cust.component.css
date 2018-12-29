@@ -1,0 +1,14 @@
+.report-table{
+    font-size: 80%;
+    width: 82vw;
+}
+
+.table-font tr{
+    line-height: 10px;
+}
+
+select{
+    height:23px;
+    font-size:13px;
+}
+

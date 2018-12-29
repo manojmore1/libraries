@@ -1,0 +1,76 @@
+
+  <div class="table-responsive">
+  
+<table class="table table-active table-striped table-hover report-table table-sm">
+  <thead>
+    <tr>
+    <th>Select</th> 
+      <th *ngFor="let col of columns">{{col}}</th>      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="submit" value="+" (click)="addRow()"></td>
+      <td>
+        <div class="dropdown">
+            <input type="text" class="dropdown-toggle dropdown-cust-search" data-toggle="dropdown">
+            <div class="dropdown-menu">
+              <span *ngFor="let area of areas" class="dropdown-item-text">{{area}}</span>              
+            </div>
+          </div>
+      <td>
+        <div class="dropdown">
+            <input type="text" class="dropdown-toggle dropdown-cust-search" data-toggle="dropdown">
+            <div class="dropdown-menu">
+              <span *ngFor="let sub of subarea" class="dropdown-item-text">{{sub}}</span>              
+            </div>
+          </div>
+      </td>
+      <td>
+        <div>
+          <select class="cust-input" id="sel1">
+            <option>Single</option>
+            <option>Manager</option>
+          </select>
+        </div>
+      </td>
+      <td>
+         <div class="dropdown">
+            <input type="text" class="dropdown-toggle dropdown-cust-search" data-toggle="dropdown">
+            <div class="dropdown-menu">
+              <span *ngFor="let hosp of hospitals" class="dropdown-item-text">{{hosp}}</span>              
+            </div>
+          </div>
+      </td>
+      <td>
+         <div>
+          <select class="cust-input" id="sel1">
+            <option>Doctor</option>
+            <option>Chemist</option>
+          </select>
+        </div>
+      </td>
+      <td>
+         <div>
+          <select class="cust-input" id="sel1">
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
+      </td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+      <td><input type="text"></td>
+    </tr>
+    <tr *ngFor="let tabledata of PeriodicElement">
+      <td><input type="checkbox" value=""></td>
+      <td *ngFor="let col of columns">{{tabledata[col]}}</td>      
+    </tr>
+    <!-- To: -->
+    
+    
+  </tbody>
+</table>
+</div>
